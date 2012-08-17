@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title Taski
+    = csrf_meta_tags
+    = javascript_include_tag 'jquery', 'rails', 'application'
+    = stylesheet_link_tag 'application'
+  %body
+    %header
+      - if logged_in?
+        %ul
+          %li Hello #{current_user.first_name}
+          %li= link_to "View Tasks", root_path
+          %li= link_to "Logout", logout_path, :method => :delete
+      %h1= link_to "Taski", root_path
+        
+    = display_flash
+    = yield

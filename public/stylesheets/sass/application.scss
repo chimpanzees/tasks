@@ -1,0 +1,105 @@
+@import "reset";
+@import "mixins";
+
+html { font-family:"Helvetica Neue", Arial, sans-serif; font-size:12px; color:#333; }
+body { -webkit-font-smoothing:antialiased; margin:3%;}
+
+header {
+  overflow:hidden;
+  border-bottom:1px solid #efefef;
+  margin-bottom:15px;
+  ul {
+    float:right;
+    margin-bottom:10px;
+    font-size:90%;
+    li { float:left; color:#999; margin-left:15px;}
+    li a { color:#999;}
+  }
+  h1 a { color:#999; text-decoration:none; }
+}
+
+h2 { font-size:150%; margin:15px 0;}
+
+div.flash p { font-weight:bold; font-size:140%; margin-bottom:15px; border-bottom:1px solid #ccc; padding-bottom:4px;}
+div.flash.alert p { color:#ec0d0d; border-color:#ec0d0d;}
+div.flash.notice p { color:#6daa1e; border-color:#6daa1e;}
+
+ul.views {
+  overflow:hidden;
+  margin-bottom:15px;
+  li { float:left; margin-right:10px;}
+  li a { display:block; background:#efefef; color:#333; text-decoration:none; padding:5px 12px; @include border-radius(4px);}
+  li a:hover { background:#ddd;}
+  li a.active { background:#aaa; color:#fff; }
+}
+
+form.new-task {
+  background:#ffffee;
+  border:1px solid #e1e1bb;
+  @include border-radius(4px);
+  padding:10px;
+  margin-bottom:15px;
+  p.text { border:1px solid #ccc; padding:6px; background:#fff;@include border-radius(4px);}
+  p.text textarea {border:0; padding:0; width:100%; font-size:140%; height:60px;}
+  p.submit { margin-top:10px;}
+}
+
+table.tasks {
+  width:100%;
+  margin:20px 0;
+  border:1px solid #ccc;
+  tr td { padding:12px; vertical-align:middle; background:#fff;text-align:center; }
+  tr td a { color:#333; text-decoration:none; }
+  tr:nth-child(2n) td { background:#f7f7f7;}
+  tr td.check { width:2%; background:#efefef; border-right:1px solid #ccc; }
+  tr td.project { width:8%; font-weight:bold; font-size:90%;}
+  tr td.text { width:70%;text-align:left; font-size:120%; }
+  tr td.user { width:10%; }
+  tr td.date { width:10%;}
+  
+  tr.overdue td { background:#fbeaea;color:#f80000;}
+  tr.overdue td a { color:#f80000}
+  tr.overdue td.text {  font-weight:bold;}
+  tr.overdue:nth-child(2n) td { background:#f7dddd;}
+  
+  tr:hover td { background:#fffdf5;}
+  tr:hover:nth-child(2n) td { background:#fbf9f2;}
+
+  tr:hover td.check { background:#f7f4e7;}
+  
+  tr td.none { padding:100px 0; color:#999; font-style:italic; background:#fff;}
+}
+
+div.task {
+  background:#ffffee;
+  border:1px solid #e1e1bb;
+  @include border-radius(4px);
+  font-size:200%;
+  padding:25px;
+}
+
+ul.edit {
+  overflow:hidden;
+  margin:15px 0;
+  background:#efefef;
+  padding:25px;
+  @include border-radius(4px);
+  li {
+    float:left;
+    padding-right:25px;
+    margin-right:25px;
+    p.label { margin-bottom:6px; text-transform:uppercase; font-size:90%; color:#999;}
+    p.submit { margin-top:17px;}
+  }
+}
+
+dl.login {
+  font-size:130%;
+  dt { margin:15px 0; font-size:150%;}
+  dd input[type=text], dd input[type=password] { font-size:150%;}
+  dd.submit { margin:15px 0;}
+}
+
+p.delete {
+  a { color:red;}
+}

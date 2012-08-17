@@ -1,0 +1,20 @@
+= form_for @new_task || Task.new, :html => {:class => 'new-task'} do |f|
+  %p.text= f.text_area :text, :placeholder => "Enter a task (e.g. @charlie Take the bins out on:friday)"
+  %p.submit= f.submit "Add Task"
+
+%ul.views
+  - %w{ mine today all completed unassigned }.each do |view|
+    %li= link_to t('.titles.' + view), tasks_path(:view => view), :class => params[:view] == view ? 'active' : ''
+
+%table.tasks
+  - if @tasks.empty?
+    %tr
+      %td.none There are no tasks in this view
+  - else
+    - for task in @tasks
+      %tr{:class => [task.overdue? ? 'overdue' : ''].join(' ')}
+        %td.check= check_box_tag 'tasks[]', task.id, task.completed?
+        %td.project= task.project && link_to(task.project.name, tasks_path(:view => 'project', :project => task.project))
+        %td.text= link_to task.text, task
+        %td.user= task.user ? link_to(task.user.short_name, tasks_path(:view => 'user', :user => task.user)) : ''
+        %td.date= task.due_on ? task.due_on.to_s(:short) : ''

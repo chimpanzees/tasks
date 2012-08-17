@@ -1,0 +1,18 @@
+%div.task
+  = @task.text
+
+= form_for @task do |f|
+  %ul.edit
+    %li
+      %p.label= f.label :user_id
+      %p.field= f.collection_select :user_id, User.all, :id, :short_name, :include_blank => true
+    %li
+      %p.label= f.label :project_id
+      %p.field= f.collection_select :project_id, Project.all, :id, :name, :include_blank => true
+    %li
+      %p.label= f.label :due_on
+      %p.field= f.datetime_select :due_on, :include_blank => true, :order => [:day, :month, :year]
+    %li
+      %p.submit= f.submit
+
+%p.delete= link_to "Delete task?", @task, :method => :delete, :data => {:confirm => "Are you sure?"}

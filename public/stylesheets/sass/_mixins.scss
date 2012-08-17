@@ -1,0 +1,83 @@
+@mixin monospace-font() {
+  font-family:$monospace-family;
+}
+
+@mixin vertical-gradient($start, $stop) { 
+  background-color: $stop;
+  background-image:-webkit-gradient(linear, left top, left bottom, from($start), to($stop));
+  background-image:-moz-linear-gradient(top, $start, $stop);
+};
+
+@mixin horizontal-gradient($start, $stop) { 
+  background-color: $stop;
+  background-image:-webkit-gradient(linear, left top, right top, from($start), to($stop));
+  background-image:-moz-linear-gradient(left, $start, $stop);
+};
+
+@mixin border-radius($size:10px) {
+  border-radius:$size;
+  -webkit-border-radius:$size;
+  -moz-border-radius:$size;
+};
+
+@mixin border-radius-bottom($size:5px) {
+  border-bottom-left-radius:$size;
+  border-bottom-right-radius:$size;
+  -webkit-border-bottom-left-radius:$size;
+  -webkit-border-bottom-right-radius:$size;
+  -moz-border-radius-bottomleft:$size;
+  -moz-border-radius-bottomright:$size;
+}
+
+@mixin border-radius-top($size:5px) {
+  border-top-left-radius:$size;
+  border-top-right-radius:$size;
+  -webkit-border-top-left-radius:$size;
+  -webkit-border-top-right-radius:$size;
+  -moz-border-radius-topleft:$size;
+  -moz-border-radius-topright:$size;
+}
+
+@mixin border-radius-top-left($size:5px) {
+  border-top-left-radius:$size;
+  -webkit-border-top-left-radius:$size;
+  -moz-border-radius-topleft:$size;
+}
+
+@mixin border-radius-top-right($size:5px) {
+  border-top-right-radius:$size;
+  -webkit-border-top-right-radius:$size;
+  -moz-border-radius-topright:$size;
+}
+
+@mixin border-radius-left($size:5px) {
+  border-top-left-radius:$size;
+  border-bottom-left-radius:$size;
+  -webkit-border-top-left-radius:$size;
+  -webkit-border-bottom-left-radius:$size;
+  -moz-border-radius-topleft:$size;
+  -moz-border-radius-bottomleft:$size;
+}
+
+@mixin border-radius-right($size:5px) {
+  border-top-right-radius:$size;
+  border-bottom-right-radius:$size;
+  -webkit-border-top-right-radius:$size;
+  -webkit-border-bottom-right-radius:$size;
+  -moz-border-radius-topright:$size;
+  -moz-border-radius-bottomright:$size;
+}
+
+
+
+@mixin box-shadow($h, $v, $b, $colour) {
+  -moz-box-shadow: $h $v $b $colour;
+  -webkit-box-shadow: $h $v $b $colour;
+  box-shadow: $h $v $b $colour;
+}
+
+@mixin inset-box-shadow($h, $v, $b, $colour) {
+  -moz-box-shadow: inset $h $v $b $colour;
+  -webkit-box-shadow: inset $h $v $b $colour;
+  box-shadow: inset $h $v $b $colour;
+}

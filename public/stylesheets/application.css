@@ -1,0 +1,348 @@
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+img, object, embed {
+  max-width: 100%; }
+
+ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+b, strong {
+  font-weight: bold; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help; }
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th {
+  font-weight: bold;
+  vertical-align: bottom; }
+
+td {
+  font-weight: normal;
+  vertical-align: top; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */ }
+
+input[type="radio"] {
+  vertical-align: text-bottom; }
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+  *vertical-align: baseline; }
+
+.ie6 input {
+  vertical-align: text-bottom; }
+
+select, input, textarea {
+  font: 99% sans-serif; }
+
+table {
+  font-size: inherit;
+  font: 100%; }
+
+/* Accessible focus treatment
+	people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {
+  outline: none; }
+
+small {
+  font-size: 85%; }
+
+strong, th {
+  font-weight: bold; }
+
+td, td img {
+  vertical-align: top; }
+
+/* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif; }
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+button {
+  cursor: pointer; }
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0; }
+
+/* make buttons play nice in IE */
+button {
+  width: auto;
+  overflow: visible; }
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic; }
+
+/* prevent BG image flicker upon hover */
+.ie6 html {
+  filter: expression(document.execCommand("BackgroundImageCache", false, true)); }
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+a, textarea {
+  outline: none; }
+
+html {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  color: #333; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  margin: 3%; }
+
+header {
+  overflow: hidden;
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 15px; }
+  header ul {
+    float: right;
+    margin-bottom: 10px;
+    font-size: 90%; }
+    header ul li {
+      float: left;
+      color: #999;
+      margin-left: 15px; }
+    header ul li a {
+      color: #999; }
+  header h1 a {
+    color: #999;
+    text-decoration: none; }
+
+h2 {
+  font-size: 150%;
+  margin: 15px 0; }
+
+div.flash p {
+  font-weight: bold;
+  font-size: 140%;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px; }
+
+div.flash.alert p {
+  color: #ec0d0d;
+  border-color: #ec0d0d; }
+
+div.flash.notice p {
+  color: #6daa1e;
+  border-color: #6daa1e; }
+
+ul.views {
+  overflow: hidden;
+  margin-bottom: 15px; }
+  ul.views li {
+    float: left;
+    margin-right: 10px; }
+  ul.views li a {
+    display: block;
+    background: #efefef;
+    color: #333;
+    text-decoration: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px; }
+  ul.views li a:hover {
+    background: #ddd; }
+  ul.views li a.active {
+    background: #aaa;
+    color: #fff; }
+
+form.new-task {
+  background: #ffffee;
+  border: 1px solid #e1e1bb;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 15px; }
+  form.new-task p.text {
+    border: 1px solid #ccc;
+    padding: 6px;
+    background: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px; }
+  form.new-task p.text textarea {
+    border: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 140%;
+    height: 60px; }
+  form.new-task p.submit {
+    margin-top: 10px; }
+
+table.tasks {
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid #ccc; }
+  table.tasks tr td {
+    padding: 12px;
+    vertical-align: middle;
+    background: #fff;
+    text-align: center; }
+  table.tasks tr td a {
+    color: #333;
+    text-decoration: none; }
+  table.tasks tr:nth-child(2n) td {
+    background: #f7f7f7; }
+  table.tasks tr td.check {
+    width: 2%;
+    background: #efefef;
+    border-right: 1px solid #ccc; }
+  table.tasks tr td.project {
+    width: 8%;
+    font-weight: bold;
+    font-size: 90%; }
+  table.tasks tr td.text {
+    width: 70%;
+    text-align: left;
+    font-size: 120%; }
+  table.tasks tr td.user {
+    width: 10%; }
+  table.tasks tr td.date {
+    width: 10%; }
+  table.tasks tr.overdue td {
+    background: #fbeaea;
+    color: #f80000; }
+  table.tasks tr.overdue td a {
+    color: #f80000; }
+  table.tasks tr.overdue td.text {
+    font-weight: bold; }
+  table.tasks tr.overdue:nth-child(2n) td {
+    background: #f7dddd; }
+  table.tasks tr:hover td {
+    background: #fffdf5; }
+  table.tasks tr:hover:nth-child(2n) td {
+    background: #fbf9f2; }
+  table.tasks tr:hover td.check {
+    background: #f7f4e7; }
+  table.tasks tr td.none {
+    padding: 100px 0;
+    color: #999;
+    font-style: italic;
+    background: #fff; }
+
+div.task {
+  background: #ffffee;
+  border: 1px solid #e1e1bb;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  font-size: 200%;
+  padding: 25px; }
+
+ul.edit {
+  overflow: hidden;
+  margin: 15px 0;
+  background: #efefef;
+  padding: 25px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px; }
+  ul.edit li {
+    float: left;
+    padding-right: 25px;
+    margin-right: 25px; }
+    ul.edit li p.label {
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      font-size: 90%;
+      color: #999; }
+    ul.edit li p.submit {
+      margin-top: 17px; }
+
+dl.login {
+  font-size: 130%; }
+  dl.login dt {
+    margin: 15px 0;
+    font-size: 150%; }
+  dl.login dd input[type=text], dl.login dd input[type=password] {
+    font-size: 150%; }
+  dl.login dd.submit {
+    margin: 15px 0; }
+
+p.delete a {
+  color: red; }

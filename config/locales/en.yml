@@ -2,4 +2,11 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  tasks:
+    index:
+      titles:
+        mine: My Tasks
+        today: My Tasks (due today)
+        all: All Tasks
+        completed: My Completed Tasks
+        unassigned: Unassigned Tasks

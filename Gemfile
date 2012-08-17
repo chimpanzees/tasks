@@ -9,4 +9,5 @@ gem 'basic_ssl'
 gem 'will_paginate'
 gem 'dynamic_form'
 gem 'acts_as_list'
+gem 'chronic'
 gem 'atech_identity', :git => "git@codebasehq.com:atechmedia/identity/lib.git"

@@ -38,6 +38,7 @@ GEM
     arel (3.0.2)
     basic_ssl (1.0.3)
     builder (3.0.0)
+    chronic (0.6.7)
     dynamic_form (1.1.4)
     erubis (2.7.0)
     haml (3.1.7)
@@ -104,6 +105,7 @@ DEPENDENCIES
   acts_as_list
   atech_identity!
   basic_ssl
+  chronic
   dynamic_form
   haml
   mysql2
